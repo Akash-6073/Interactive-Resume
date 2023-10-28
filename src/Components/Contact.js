@@ -124,6 +124,18 @@ export default function Contact() {
     }
   };
 
+  const observe = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+      if(entry.isIntersecting)
+      {
+        entry.target.classList.add('show');
+      }
+    })
+  })
+  
+  const hide=document.querySelectorAll(".hidden");
+  hide.forEach((el)=>observe.observe(el));
+
   return (
     <>
        <div className="hr mw3" name="contact">
@@ -134,7 +146,7 @@ export default function Contact() {
         <div className="contactLeft">
               <h1 className='heading'>Contact me</h1>
               <p><span ><i className="fa-solid fa-envelope" style={{color:"#ababab"}}></i></span>&nbsp;<a href="mailto:akashmahendrakar6073@gmail.com" style={{textDecoration:"none", color:"black"}}>akashmahendrakar6073@gmail.com</a></p>
-              <p><span  ><i class="fa-solid fa-square-phone" style={{color:"#ababab"}}></i></span>&nbsp;+91 8919596263</p>
+              <p><span  ><i className="fa-solid fa-square-phone" style={{color:"#ababab"}}></i></span>&nbsp;+91 8919596263</p>
               <div className="contactMedia">
               <a target='_blank' href="https://www.instagram.com/akash__mahendrakar/" style={{paddingLeft:"0"}}  className="insta"> <i className="fa-brands fa-instagram" style={{ color: "#e1306c"}}></i> </a>
               <a target='_blank' href="https://www.facebook.com/cute.kameenaakshu/"><i className="fa-brands fa-facebook" style={{color:"#4267B2"}}></i> </a>
@@ -142,7 +154,7 @@ export default function Contact() {
               <a target='_blank' href="https://www.linkedin.com/in/akash-mahendrakar-59b8a1220/"><i className="fa-brands fa-linkedin" style={{color:"#0a66c2"}} ></i> </a>
               <a target='_blank' href="https://wa.me/918919596263" style={{textDecoration:"none", color:"black"}}><i className="fa-brands fa-whatsapp" style={{color: "#2db950"}}></i></a>
               </div>
-              <p style={{fontSize:"24px"}} className='thanks'>Thanks for  Visiting my Portfolio !</p>
+              <p style={{fontSize:"24px"}} className='thanks hidden'>Thanks for  Visiting my Portfolio !</p>
               
         </div>
         <div className="contactRight">

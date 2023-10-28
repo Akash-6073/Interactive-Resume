@@ -10,6 +10,19 @@ import p2 from "../Images/p2.png"
 export default function Projects() {
     const [shake, setshake] = useState(false)
 
+    const observe = new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+          if(entry.isIntersecting)
+          {
+            entry.target.classList.add('pjShow');
+            
+          }
+        })
+      
+      })
+      
+      const hide=document.querySelectorAll(".pjHide");
+      hide.forEach((el)=>observe.observe(el));
   return (
      <>
       <div className="hr mw3" name="projects">
@@ -21,7 +34,7 @@ export default function Projects() {
         </div>
     <div className="projectsRight">
         
-        <div className="box">
+        <div className="box pjHide">
         <h3>Text to speech Converter</h3>
             <img src={p2} alt="" />
             <div className="content">
@@ -33,7 +46,7 @@ export default function Projects() {
                 </div>
             </div>
         </div>
-        <div className="box">
+        <div className="box pjHide">
         <h3>Title</h3>
             <img src={p2} alt="" />
             <div className="content">
@@ -45,7 +58,7 @@ export default function Projects() {
                 </div>
             </div>
         </div>
-        <div className="box">
+        <div className="box pjHide">
         <h3>Title</h3>
             <img src={p2} alt="" />
             <div className="content">
@@ -57,7 +70,7 @@ export default function Projects() {
                 </div>
             </div>
         </div>
-        <div className="box">
+        <div className="box pjHide">
         <h3>Title</h3>
             <img src={p2} alt="" />
             <div className="content">
@@ -69,7 +82,7 @@ export default function Projects() {
                 </div>
             </div>
         </div>
-        <div className="box">
+        <div className="box pjHide">
         <h3>Title</h3>
             <img src={p2} alt="" />
             <div className="content">

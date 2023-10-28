@@ -3,35 +3,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 var count=0;
 export default function Interests() {
   const [reveal, setreveal] = useState(false)
-  
-  function revealed(){
-    // var designs = document.querySelectorAll('.designs')
-    // for(var i=0;i<designs.length;i++)
-    // {
-    //   var windowht=window.innerHeight;
-    //   var top=designs[i].getBoundingClientRect().top;
-    //   var rp=150;
-    // }
-    if(window.scrollY>=(1650))
-    {
-      if(count!=1){
-      setreveal(true);
-      let x=document.querySelectorAll(".designs");
-      setTimeout(()=>{
-        for(var i=0;i<x.length;i++)
+    const observe = new IntersectionObserver((entries)=>{
+      entries.forEach((entry)=>{
+        if(entry.isIntersecting)
         {
-          x[i].classList.remove("revealDesign")
+          entry.target.classList.add('transShow');
         }
-        count=1;
-      },1000)
-      }
-      else{
-        setreveal(false);
-      }
-    } 
-  }
-    window.addEventListener("scroll",revealed)
-   
+      })
+    })
+    const hide=document.querySelectorAll(".transHide");
+    hide.forEach((el)=>observe.observe(el));
+
+
   return (
     <>
     <div className="hr mw3" name="interests">
@@ -41,7 +24,7 @@ export default function Interests() {
         <div className="interestsLeft">
         <h1 className='heading'><i className="fa-solid fa-laptop"></i>&nbsp;Interests</h1>
         </div>
-        <div className="interestsRight">
+        <div className="interestsRight transHide">
             <div className={reveal ? "designs revealDesign" : "designs"}>
             <span><i className="fa-solid fa-code"></i></span>
                 <h3>Web Design</h3>

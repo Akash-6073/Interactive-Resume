@@ -7,6 +7,7 @@ import Projects from './Components/Projects';
 import Contact from './Components/Contact';
 import Interests from './Components/Interests'
 import { Link } from 'react-scroll';
+import Myskills from './Components/Myskills';
 function App() {
 const [ht, setht] = useState("0")
 
@@ -58,6 +59,7 @@ const [ht, setht] = useState("0")
   }
   const [id,setid]=useState('');
 
+  // on scroll effect
   const [scroll, setscroll] = useState(false)
   function scrolled(){
    if(window.scrollY >=100){
@@ -69,7 +71,7 @@ const [ht, setht] = useState("0")
   }
   window.addEventListener("scroll",scrolled)
 
-
+// MENU bar setting
   const [right, setright] = useState("-200px")
   var menu=document.getElementById("Menu")
   function close(){
@@ -78,6 +80,10 @@ const [ht, setht] = useState("0")
   function open(){
    setright("0px")
   }
+
+// Hidden and show
+
+
   return (
     <>
     <div className={scroll ? 'tran tscroll' :'none'} >
@@ -96,6 +102,7 @@ const [ht, setht] = useState("0")
     </div>
     <Navbar scroll={scroll} right={right} setright={setright} close={close} open={open}/>
     <About onclick={onclick} ht={ht}/>
+    <Myskills onclick={onclick} ht={ht}/>
     <Interests/>
     <Projects/>
     <Contact/>
