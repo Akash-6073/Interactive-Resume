@@ -25,6 +25,7 @@ export default function Contact() {
       rname.classList.add("shake");
       rname.classList.remove("removeBorder");
       msg.classList.remove("vsble");
+      msg.classList.remove("success")
 
         
       setTimeout(()=>{
@@ -42,6 +43,7 @@ export default function Contact() {
         remail.classList.add("shake");
         remail.classList.remove("removeBorder");
         msg.classList.remove("vsble");
+      msg.classList.remove("success")
 
         setTimeout(()=>{
         remail.classList.remove("shake");
@@ -61,7 +63,7 @@ export default function Contact() {
         remail.classList.remove("removeBorder");
         rname.classList.remove("removeBorder");
         msg.classList.remove("vsble");
-
+      msg.classList.remove("success")
         setTimeout(()=>{
         rname.classList.remove("shake");
         remail.classList.remove("shake");
@@ -95,11 +97,11 @@ export default function Contact() {
           msg.classList.remove("vsble");
           msg.classList.remove("errorMsg");
           msg.classList.add("activeMsg")
-          msg.classList.add("thanks")
+          msg.classList.add("success")
           setTimeout(()=>{
             msg.classList.add("vsble");
           msg.classList.remove("activeMsg")
-          },3500)
+          },4500)
          
       }, (error) => {
           console.log(error.text);
@@ -116,8 +118,8 @@ export default function Contact() {
     <div className="mw3 contact">
         <div className="contactLeft">
               <h1 className='heading'>Contact me</h1>
-              <p><span style={{color:"#ff004f"}} ><i class="fa-solid fa-envelope"></i></span>&nbsp;akashmahendrakar6073@gmail.com</p>
-              <p><span style={{color:"#ff004f"}} ><i class="fa-solid fa-phone"></i></span>&nbsp;+91 8919596263</p>
+              <p><span style={{color:"#ff004f"}} ><i class="fa-regular fa-envelope"></i></span>&nbsp;<a href="mailto:akashmahendrakar6073@gmail.com" style={{textDecoration:"none", color:"black"}}>akashmahendrakar6073@gmail.com</a></p>
+              <p><span style={{color:"#ff004f"}} ><i class="fa-brands fa-whatsapp" style={{color: "#2db950"}}></i></span>&nbsp;<a href="https://wa.me/918919596263" style={{textDecoration:"none", color:"black"}} target='_blank'>+91 8919596263</a></p>
               <div className="contactMedia">
               <a href="https://www.instagram.com/akash__mahendrakar/"> <i class="fa-brands fa-instagram" style={{ color: "red"}}></i> </a>
               <a href="https://www.instagram.com/akash__mahendrakar/"><i class="fa-brands fa-facebook" style={{color:"#4267B2"}}></i> </a>
