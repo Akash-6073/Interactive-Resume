@@ -39,21 +39,21 @@ export default function Interests() {
     </div>
     <div className="mw3 interests">
         <div className="interestsLeft">
-        <h1 className='heading'><i class="fa-solid fa-laptop"></i>&nbsp;Interests</h1>
+        <h1 className='heading'><i className="fa-solid fa-laptop"></i>&nbsp;Interests</h1>
         </div>
         <div className="interestsRight">
             <div className={reveal ? "designs revealDesign" : "designs"}>
-            <span><i class="fa-solid fa-code"></i></span>
+            <span><i className="fa-solid fa-code"></i></span>
                 <h3>Web Design</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cum magni provident qui autem pariatur, adipisci ipsam ex maiores cumque vel corrupti ad molestiae.</p>
             </div>
             <div className={reveal ? "designs revealDesign" : "designs"}>
-            <span><i class="fa-solid fa-crop-simple"></i></span>
+            <span><i className="fa-solid fa-crop-simple"></i></span>
                 <h3>UI/UX Design</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cum magni provident qui autem pariatur, adipisci ipsam ex maiores cumque vel corrupti ad molestiae.</p>
             </div>
             <div className={reveal ? "designs revealDesign" : "designs"}>
-                <span> <i class="fa-brands fa-app-store"></i></span>
+                <span> <i className="fa-brands fa-app-store"></i></span>
                 <h3>Web Design</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cum magni provident qui autem pariatur, adipisci ipsam ex maiores cumque vel corrupti ad molestiae.</p>
             </div>

@@ -21,7 +21,7 @@
 
 /* NAVBAR   */
 .intro{
-    background: rgba(0, 0, 0, 0.933);
+    background:  #000;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
@@ -351,6 +351,7 @@ margin-bottom: 10px;
     /* background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%); */
     /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
     /* background-image: linear-gradient(to right, #868f96 0%, #596164 100%); */
+ /* background-color: #ababab; */
     background-color: #DCD9D4;
  background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
  background-blend-mode: soft-light,screen;
@@ -544,7 +545,7 @@ margin-bottom: 10px;
     padding: 15px 0;
 }
 .contactLeft p{
-    padding: 10px 0;
+    padding: 10px 3px;
     font-size: 20px;
     font-family: var(--font2);
 }
@@ -567,16 +568,16 @@ margin-bottom: 10px;
     margin-right:5px;
     padding: 5px 8px;
     border-radius: 50%;
-    transition:background 0.5s ,transform 0.5s;
+    transition:background 0.5s ,transform 0.3s;
  }
  .contactMedia a:hover{
     
     /* background-color: #ff004f; */
     /* color: white; */
-    transform: translateY(-5px);
+    transform: scale(1.5);
  }
  .contactMedia a i{
-font-size: 25px;
+font-size: 35px;
  }
 .contactRight{
     width: 50%;
@@ -646,7 +647,7 @@ font-size: 25px;
 .footer{
     margin: auto;
     font-size: 20px;
-    background-color: black;
+    background-color: #000;
     color: white;
     text-align: center;
     padding: 15px;

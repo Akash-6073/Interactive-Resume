@@ -84,7 +84,7 @@ export default function Projects() {
         <div className="box last">
         <h3>View all on my GitHub</h3>
         <div className="icon">
-        <i class="fa-brands fa-square-github"></i>
+        <i className="fa-brands fa-square-github"></i>
         </div>
 
             <div className="content">

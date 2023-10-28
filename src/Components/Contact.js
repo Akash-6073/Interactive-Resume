@@ -31,11 +31,14 @@ export default function Contact() {
       setTimeout(()=>{
       rname.classList.remove("shake");
       rname.classList.add("removeBorder");
-      // msg.classList.remove("errorMsg")
       msg.classList.add("vsble");
 
 
       },1000)
+      setTimeout(()=>{
+      msg.classList.remove("errorMsg")
+
+      },3000)
       }
       if (y==="")
       {
@@ -51,8 +54,10 @@ export default function Contact() {
         // msg.classList.remove("errorMsg")
         msg.classList.add("vsble");
 
-  
         },1000)
+        setTimeout(()=>{
+            msg.classList.remove("errorMsg")
+      },3000)
 
       }
       if (x==="" && y==="")
@@ -71,10 +76,11 @@ export default function Contact() {
         rname.classList.add("removeBorder");
         // msg.classList.remove("errorMsg")
         msg.classList.add("vsble");
-
-
-  
         },1000)
+
+        setTimeout(()=>{
+          msg.classList.remove("errorMsg")
+        },3000)
 
       }
       msg.classList.remove("vsble");
@@ -105,6 +111,15 @@ export default function Contact() {
          
       }, (error) => {
           console.log(error.text);
+          msg.innerText="!! Please check you have a valid internet connection !"
+          msg.classList.remove("vsble");
+          msg.classList.add("errorMsg");
+          msg.classList.remove("activeMsg")
+          msg.classList.remove("success")
+          setTimeout(()=>{
+            msg.classList.add("vsble");
+          msg.classList.remove("errorMsg");
+          },3000)
       });
     }
   };
@@ -118,13 +133,14 @@ export default function Contact() {
     <div className="mw3 contact">
         <div className="contactLeft">
               <h1 className='heading'>Contact me</h1>
-              <p><span style={{color:"#ff004f"}} ><i class="fa-regular fa-envelope"></i></span>&nbsp;<a href="mailto:akashmahendrakar6073@gmail.com" style={{textDecoration:"none", color:"black"}}>akashmahendrakar6073@gmail.com</a></p>
-              <p><span style={{color:"#ff004f"}} ><i class="fa-brands fa-whatsapp" style={{color: "#2db950"}}></i></span>&nbsp;<a href="https://wa.me/918919596263" style={{textDecoration:"none", color:"black"}} target='_blank'>+91 8919596263</a></p>
+              <p><span ><i className="fa-solid fa-envelope" style={{color:"#ababab"}}></i></span>&nbsp;<a href="mailto:akashmahendrakar6073@gmail.com" style={{textDecoration:"none", color:"black"}}>akashmahendrakar6073@gmail.com</a></p>
+              <p><span  ><i class="fa-solid fa-square-phone" style={{color:"#ababab"}}></i></span>&nbsp;+91 8919596263</p>
               <div className="contactMedia">
-              <a href="https://www.instagram.com/akash__mahendrakar/"> <i class="fa-brands fa-instagram" style={{ color: "red"}}></i> </a>
-              <a href="https://www.instagram.com/akash__mahendrakar/"><i class="fa-brands fa-facebook" style={{color:"#4267B2"}}></i> </a>
-              <a href="https://www.instagram.com/akash__mahendrakar/"><i class="fa-brands fa-github"></i> </a>
-              <a href="https://www.instagram.com/akash__mahendrakar/"><i class="fa-brands fa-linkedin" style={{color:"#0a66c2"}} ></i> </a>
+              <a target='_blank' href="https://www.instagram.com/akash__mahendrakar/" style={{paddingLeft:"0"}}  className="insta"> <i className="fa-brands fa-instagram" style={{ color: "#e1306c"}}></i> </a>
+              <a target='_blank' href="https://www.facebook.com/cute.kameenaakshu/"><i className="fa-brands fa-facebook" style={{color:"#4267B2"}}></i> </a>
+              <a target='_blank' href="https://github.com/Akash-6073"><i className="fa-brands fa-github"></i> </a>
+              <a target='_blank' href="https://www.linkedin.com/in/akash-mahendrakar-59b8a1220/"><i className="fa-brands fa-linkedin" style={{color:"#0a66c2"}} ></i> </a>
+              <a target='_blank' href="https://wa.me/918919596263" style={{textDecoration:"none", color:"black"}}><i className="fa-brands fa-whatsapp" style={{color: "#2db950"}}></i></a>
               </div>
               <p style={{fontSize:"24px"}} className='thanks'>Thanks for  Visiting my Portfolio !</p>
               
@@ -135,14 +151,14 @@ export default function Contact() {
             <input className='rname removeBorder' type="text" placeholder='Your Name' name="user_name"/>
             <input className='remail removeBorder' type="email" placeholder='Your Email' name="user_email"/>
             <textarea name="message" style={{ background:"rgba(128, 128, 128, 0.681)"  }} id="" cols="30" rows="5" placeholder='Message'></textarea>
-            <button type='submit' ><i class="fa-solid fa-paper-plane"></i>&nbsp;Let's Collaborate</button>
-            <span className='vsble' id='msg'></span>
+            <button type='submit' ><i className="fa-solid fa-paper-plane"></i>&nbsp;Let's Collaborate</button>
+            <span className='vsble' id='msg'> shdbjas </span>
           </form>
         </div>
     </div>
     </div>
     <div className="mw2 footer">
-      Copyright &copy; Made with <i class="fa-solid fa-heart" style={{color:"#ff004f"}}></i> Akash Mahendrakar
+      Copyright &copy; Made with <i className="fa-solid fa-heart" style={{color:"#ff004f"}}></i> Akash Mahendrakar
     </div>
     </>
   )
