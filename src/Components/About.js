@@ -31,18 +31,6 @@ export default function About(props) {
   // const zoomHide=document.querySelectorAll(".zoomHide");
   // zoomHide.forEach((el)=>observer.observe(el));
 
-
-  const observe = new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
-      if(entry.isIntersecting)
-      {
-        entry.target.classList.add('show');
-      }
-    })
-  })
-  
-  const hide=document.querySelectorAll(".hidden");
-  hide.forEach((el)=>observe.observe(el));
   return (
     <>
       

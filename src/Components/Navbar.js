@@ -72,7 +72,7 @@ hide.forEach((el)=>observe.observe(el));
          </h1>
       </div>
       <div className="aboutRight">
-        <img className='pc transHide ' src={img2} alt="" />
+        <img className='pc' src={img2} alt="" />
         <img className='phone' src={img3} alt="" />
       </div>
     </div>

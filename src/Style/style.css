@@ -492,7 +492,7 @@ margin-bottom: 10px;
     width: 255px;
     margin: 0 35px; 
     border-radius: 5px;
-    transition: background 0.5s, transform 0.5s;
+    transition: background 0.5s, transform 5s;
 }
 .designs h3{
     font-family: var(--font3);

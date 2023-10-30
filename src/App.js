@@ -83,6 +83,17 @@ const [ht, setht] = useState("0")
 
 // Hidden and show
 
+const observe = new IntersectionObserver((entries)=>{
+  entries.forEach((entry)=>{
+    if(entry.isIntersecting)
+    {
+      entry.target.classList.add('show');
+    }
+  })
+})
+
+const hide=document.querySelectorAll(".hidden");
+hide.forEach((el)=>observe.observe(el));
 
   return (
     <>
